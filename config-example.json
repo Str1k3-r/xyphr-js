@@ -1,0 +1,88 @@
+{
+  "rpc_nodes": [
+    "https://api.steemit.com",
+    "https://rpc.buildteam.io",
+    "https://steemd.minnowsupportproject.org",
+    "https://steemd.privex.io",
+    "https://gtg.steem.house:8090"
+  ],
+  "backup_mode": false,
+  "disabled_mode": false,
+  "detailed_logging": true,
+  "owner_account": "xyphr",
+  "account": "xyphr",
+  "memo_key": "5Ht7XbR5ptXDNrV5U5ksMAeejTtWCGrYhGU6DKfDgDkgzz79WVR",
+  "posting_key": "5JYXy6zh8fCb2y5FHCBwe95NQo1vdwgFnbNS7b82cd5L8qqMB7M",
+  "active_key": "5J4Puy68QQBZdDWDiYLWQv66pNZckvSKC5RkcwbhFJCJzQvhLqN",
+  "account1": "dontcare",
+  "memo_key1": "5Jfu6sx9xg1zEGzT8nHzPBnictrjMGUxFaKbwDhyTfAzA6Rm1r2",
+  "posting_key1": "5JHsW98jswaJ18aXehQMv97cCBHKWKKW4roz21jK9rQNBgrbYBC",
+  "active_key1": "5JVQJr8ffLXX45PDrfbkb5Z2D94Q8ZLVYiohswiwhkv4vJcxjxW",
+  "account2": "offended",
+  "memo_key2": "5J9LnxmAgW5kDrdj1onfrfi84PahpV6ynqonyUucskqejetXfmf",
+  "posting_key2": "5Kbz1ZbpUhMAx2pX4DJyZdeNrZaHmpZYpp41MNSAbdJKEiPm9w2",
+  "active_key2": "5KahR7rgKidEQSUtWAusmazqYeHX5yYrGihRfujYSLa9RGKa22j",
+  "auto_claim_rewards" : true,
+  "post_rewards_withdrawal_account": "xyphr",
+  "min_bid": 0.001,
+  "max_bid": 0.01,
+  "max_roi": 10,
+  "round_fill_limit": 1,
+  "batch_vote_weight": 100,
+  "min_post_age": 0,
+  "max_post_age": 120,
+  "allow_comments": true,
+  "currencies_accepted": ["SBD", "STEEM"],
+  "refunds_enabled": true,
+  "min_refund_amount": 0.002,
+  "no_refund": ["bittrex", "poloniex", "openledger", "blocktrades", "minnowbooster", "ginabot"],
+  "flag_signal_accounts": ["spaminator", "cheetah", "steemcleaners", "mack-bot", "blacklist-a"],
+  "comment_location": "",
+  "blacklist_location": "blacklist",
+  "refund_blacklist": false,
+  "blacklist_donation_account": "str1k3r",
+  "blacklisted_tags": [],
+  "max_per_author_per_round": 1,
+  "auto_withdrawal": {
+    "active": false,
+    "accounts": [
+      {
+        "name": "$delegators",
+        "stake": 0,
+        "overrides": [
+          { "name": "delegator_account", "beneficiary": "beneficiary_account" }
+        ]
+      },
+      {
+        "name": "account2",
+        "stake": 10000
+      }
+    ],
+    "frequency": "daily",
+    "execute_time": 20,
+    "memo": "# Daily Earnings - {balance} | Thank you!"
+  },
+  "api": {
+    "enabled": true,
+    "port": 3000
+  },
+  "transfer_memos": {
+    "bot_disabled": "Refund for invalid bid: {amount} - The bot is currently disabled.",
+    "below_min_bid": "Refund for invalid bid: {amount} - Min bid amount is {min_bid}.",
+    "above_max_bid": "Refund for invalid bid: {amount} - Max bid amount is {max_bid}.",
+    "invalid_currency": "Refund for invalid bid: {amount} - Bids in {currency} are not accepted.",
+    "already_voted": "Refund for invalid bid: {amount} - Bot already voted on this post.",
+    "max_age": "Refund for invalid bid: {amount} - Posts cannot be older than {max_age}.",
+    "min_age": "Refund for invalid bid: {amount} - Posts cannot be less than {min_age} minutes old.",
+    "invalid_post_url": "Refund for invalid bid: {amount} - Invalid post URL in memo.",
+    "blacklist_refund": "Refund for invalid bid: {amount} - The author of this post is on the blacklist.",
+    "blacklist_no_refund": "Bid is invalid - The author of this post is on the blacklist.",
+    "blacklist_donation": "Bid from blacklisted/flagged user sent as a donation. Thank you!",
+    "flag_refund": "Refund for invalid bid: {amount} - This post has been flagged by one or more spam / abuse indicator accounts.",
+    "flag_no_refund": "Bid is invalid - This post has been flagged by one or more spam / abuse indicator accounts.",
+    "blacklist_tag": "Bid is invalid - This post contains the [{tag}] tag which is not allowed by this bot.",
+    "bids_per_round": "Bid is invalid - This author already has the maximum number of allowed bids in this round.",
+    "round_full": "The current bidding round is full. Please try again next round!",
+    "forward_payment": "Payment forwarded from @{tag}."
+  }
+}
